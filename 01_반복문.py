@@ -41,8 +41,75 @@ for i in range(1, 10, 2):
     print(i)
 
 # 뒤집기
+# for i in range(1, 10, -1): # range(1, 10, -1) -> 빈 range. -> 음수 증가폭 -> 시작점 > 종료점
 for i in range(9, 0, -1):
     print(i)
+
+# reversed() -> 시퀀스형태의 자료형을 뒤집어주는 기술
+'''
+- for 변수 in reversed(range(횟수))
+'''
+for i in reversed(range(10)):
+    print(i, end = '')
+print()
+for i in range(10)[::-1]:
+    print(i, end = '')
+print()
+for i in range(10):
+    print(9-i, end = '')
+print()
+
+# 시퀀스 객체로 반복하기 (리스트, 튜플, 문자열...)
+a = ["아무1", "아무2", "아무3"]
+for v in a: # value -> v
+    print(v)
+
+fruits = ["banana", "orange", "mango"]
+for fruit in fruits: # 리스트, 튜플 -> 시퀀스 (복수형) => for를 통해서 반복 호출하는 변수명 -> 단수
+    print(fruit)
+
+text = "작은 것들을 위한 시"
+for c in text:
+    print(c)
+
+for c in reversed(text):
+    print(c)
+
+for c in text[::-1]:
+    print(c)
+
+# 인덱스를 사용한 조회
+for i in range(len(text)):
+    # -> texxt[i] : 반복문으로 조회를 하면...--> 요소 하나하나를 검색.
+    print(i, text[i])
+
+for t in text: # 시퀀스 안에 있는 요소들을 하나씩 호출해서 출력한 코드
+    print(t)
+
+for i in range(len(text))[::-1]:
+    # -> texxt[i] : 반복문으로 조회를 하면...--> 요소 하나하나를 검색.
+    print(i, text[i])
+
+for t in text[::-1]:  # 시퀀스 안에 있는 요소들을 하나씩 호출해서 출력한 코드
+    print(t)
+
+# enumerate - 인덱스, 값 -> 튜플상을 만들어주는 함수
+for i in enumerate(fruits):
+    a, b = i # 튜플 -> 왼쪽에 자리수를 맞춰서 변수를 둬서 해체 => 튜플 언팩킹
+    print(i) # (인덱스, 요소의 값)
+    print("a", a, "b", b)
+
+for i, v in enumerate(fruits): # for에서부터 언팩킹으로 할당이 가능.
+    print("i", i, "v", v)
+
+
+
+
+
+
+
+
+
 
 
 
