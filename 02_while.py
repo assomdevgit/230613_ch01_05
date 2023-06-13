@@ -112,9 +112,22 @@ while w != 3:
 
 
 
+# n = int(input())
+# for i in range(1,10):
+#     print(str(n) + " * " + str(i) + " = " + str(n*i))
+
+
+# while True:
+#     A, B = map(int, input().split())
+#     if A == 0 and B == 0:
+#         break
+#     print(A+B)
 
 
 
+a = 5500
+b = divmod(a, 5500)
+print (b)
 
 
 
